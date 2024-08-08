@@ -1,11 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const apiKey = '3576072ad3c9641c760bbe16e7e2639c';  // 
+    const apiKey = '3576072ad3c9641c760bbe16e7e2639c';  // Replace with your OpenWeatherMap API key
     const weatherBtn = document.getElementById('get-weather-btn');
     const cityInput = document.getElementById('city-input');
     const weatherResult = document.getElementById('weather-result');
-
-    <div id="openweathermap-widget-1"></div>
-<script src='//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/d3.min.js'></script><script>window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];  window.myWidgetParam.push({id: 1,cityid: '2643743',appid: '3576072ad3c9641c760bbe16e7e2639c',units: 'metric',containerid: 'openweathermap-widget-1',  });  (function() {var script = document.createElement('script');script.async = true;script.charset = "utf-8";script.src = "//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js";var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(script, s);  })();</script>
 
     weatherBtn.addEventListener('click', () => {
         const city = cityInput.value;
@@ -50,7 +47,23 @@ document.addEventListener('DOMContentLoaded', () => {
         `;
         weatherResult.innerHTML = weatherDetails;
     }
-   
+    // function changeBackgroundImage(temperature) {
+    //     let imageUrl = '';
+
+    //     if (temperature  < 10) {
+    //         imageUrl = url(freezy.jpg);
+    //     } else if (temperature >= 10 && temperature <= 25) {
+    //         imageUrl = 'url(image_url_3)';
+    //     } else if (temperature >= 25 && temperature <= 35) {
+    //         imageUrl = 'url(image_url_4)';
+    //     } else {
+    //         imageUrl = 'url(default_image_url)';
+    //     }
+
+    //     container.style.backgroundImage = imageUrl;
+    // }
+
+    // Trigger getWeather on pressing "Enter" key in the city input field
     cityInput.addEventListener('keydown', (event) => {
         if (event.keyCode === 13) { // Check if "Enter" key is pressed (key code 13)
             event.preventDefault(); // Prevent form submission (to avoid page reload)
